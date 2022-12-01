@@ -1,0 +1,14 @@
+class Solution:
+    def MissingNumber(self,array,n):
+        s=0
+        for i in range(len(array)):
+            s+=array[i]
+            e=n*(n+1)/2
+            r=e-s
+        return int(r)
+t=int(input())
+for _ in range(0,t):
+    n=int(input())
+    a=list(map(int,input().split()))
+    s=Solution().MissingNumber(a,n)
+    print(s)
